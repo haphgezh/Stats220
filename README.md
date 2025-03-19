@@ -5,7 +5,7 @@ This is my repo for STATS 220.
 ## A little about me:
 
 1. I am undertaking a degree in computer science
-2. I am taking ** STATS 220 ** because I enjoy stats
+2. I am taking **STATS 220** because I enjoy stats
 3. I am interested in learning about Stats
 
 
