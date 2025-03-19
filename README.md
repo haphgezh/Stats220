@@ -25,4 +25,4 @@ This is my repo for STATS 220.
 
 A meme that captures how I currently feel about my university studies is ![](https://c.tenor.com/8druEACXtX8AAAAd/tenor.gif)
 
-Another meme ![](https://tenor.com/en-GB/view/dancing-dino-dinosaur-dance-funny-gif-16796919706011066868)
+Another meme ![](https://media.tenor.com/6Rqleo2MYfQAAAAi/dancing-dino.gif)
