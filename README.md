@@ -20,6 +20,7 @@ This is my repo for STATS 220.
 ## Useful Websites:
 
 [Wikepedia](https://en.wikipedia.org/wiki/Main_Page)
+
 [Quizlet](https://quizlet.com/nz)
 
 A meme that captures how I currently feel about my university studies is ![](https://c.tenor.com/8druEACXtX8AAAAd/tenor.gif)
