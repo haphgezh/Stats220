@@ -1,0 +1,76 @@
+---
+title: My dynamic report
+output: html_fragment
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE)
+
+```
+
+```{css}
+body {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+}
+
+h1, h2, h3 {
+  color: #2a7ae2;  /* Blue headers */
+}
+
+img {
+  border: 2px solid #000000; /* Black border around images */
+  padding: 5px;
+}
+
+```
+# Introduction
+
+In this report we analyse the consumption patterns of various drink types and sizes over a given period. The data contains information on different drink types, sizes, and the amount bought.
+## Analysis of Drink Consumption Trends
+
+You need to change the contents of this Rmd! Replace the R code and markdown give below in this template document.
+
+```{r, echo=FALSE}
+# Load the tidyverse package
+library(tidyverse)
+
+# Load the data directly from the URL
+logged_data <- read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vT5bk8poSzvRzA8hpjIqUR9leYBYhhrN0-pyEfSEyHT0-EM3s0JU3mLPn5ZeSgeGKLRzETC06JTHCst/pub?gid=497003675&single=true&output=csv")
+
+# Rename variables
+latest_data <- logged_data %>%
+  rename(
+    date = 1,
+    drink_type = 2,
+    drink_size = 3,
+    drink_amount = 4
+  )
+
+glimpse(latest_data)
+
+#Summary values
+mean_value <- mean(latest_data$drink_amount, na.rm = TRUE)
+min_value <- min(latest_data$drink_amount, na.rm = TRUE)
+max_value <- max(latest_data$drink_amount, na.rm = TRUE)
+
+print(paste("Mean:", mean_value))
+print(paste("Min:", min_value))
+print(paste("Max:", max_value))
+
+# Create the first bar chart
+ggplot(latest_data, aes(x = drink_type)) +
+  geom_bar(fill = "#87CEEB", color = "black") +
+  labs(title = "Bar Chart of Drink Type", x = "Drink Type", y = "Count")
+
+# Create the second bar chart
+ggplot(latest_data, aes(x = drink_size)) +
+  geom_bar(fill = "#90EE90", color = "black") +
+  labs(title = "Bar Chart of Drink Size", x = "Drink Size", y = "Count")
+
+paste("The average drink amount consumed is", round(mean_value, 2), "units.")
+paste("The smallest recorded drink amount is", min_value, "units.")
+paste("The largest recorded drink amount is", max_value, "units.")
+
+```
+
