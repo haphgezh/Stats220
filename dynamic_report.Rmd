@@ -69,9 +69,9 @@ ggplot(latest_data, aes(x = drink_size)) +
   geom_bar(fill = "#90EE90", color = "black") +
   labs(title = "Bar Chart of Drink Size", x = "Drink Size", y = "Count")
 
-paste("The average drink amount consumed is", round(mean_value, 2), "units.")
-paste("The smallest recorded drink amount is", min_value, "units.")
-paste("The largest recorded drink amount is", max_value, "units.")
+paste("The average amount of drinks purchased is", round(mean_value, 2), "units.")
+paste("The smallest recorded amount of drinks purchased is", min_value, "units.")
+paste("The largest recorded amount of drinks purchased is", max_value, "units.")
 
 ```
 
