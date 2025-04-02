@@ -27,6 +27,7 @@ img {
 # Introduction
 
 In this report we analyse the consumption patterns of various drink types and sizes over a given period. The data contains information on different drink types, sizes, and the amount bought.
+
 ## Analysis of Drink Consumption Trends
 
 You need to change the contents of this Rmd! Replace the R code and markdown give below in this template document.
