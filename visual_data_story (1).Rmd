@@ -1,0 +1,83 @@
+---
+title: "Most popular drinks"
+output: html_document
+---
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE)
+```
+
+
+
+```{css, echo=FALSE}
+body {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+}
+
+h1, h2, h3 {
+  color: #1b9e77;
+}
+
+img {
+  border: 2px solid #d95f02;
+  padding: 5px;
+}
+
+```
+
+
+
+
+```{js}
+$(function() {
+  $(".level2").css('visibility', 'hidden');
+  $(".level2").first().css('visibility', 'visible');
+  $(".container-fluid").height($(".container-fluid").height() + 300);
+  $(window).on('scroll', function() {
+    $('h2').each(function() {
+      var h2Top = $(this).offset().top - $(window).scrollTop();
+      var windowHeight = $(window).height();
+      if (h2Top >= 0 && h2Top <= windowHeight / 2) {
+        $(this).parent('div').css('visibility', 'visible');
+      } else if (h2Top > windowHeight / 2) {
+        $(this).parent('div').css('visibility', 'hidden');
+      }
+    });
+  });
+})
+```
+
+```{css}
+.figcaption {display: none}
+```
+
+
+
+
+
+## Introduction
+
+This visual story explores data on drink orders observed in stores in Auckland. The data was gathered by watching customers and recording their first drink ordered, drink size, and how many drinks they ordered.
+
+## Most Common First Drink Ordered
+
+![Bar chart showing counts of drink types](plot1.png)
+
+The most frequently observed first drink ordered was coffee. Tea, smoothies, and juice were behind at much lower frequencies ordered, while water and mixed beverages were the chosen the least amount of times.
+
+## Large Drink Orders Over Time
+
+![Scatter plot of large drink orders over time](plot2.png)
+
+Large drinks were ordered throughout the day, often in multiples. Each point represents a customer who ordered a large sized drink, with the y-axis indicating how many drinks they ordered in total. The data shows that large drinks were ordered pretty consistently across the day
+
+## Drink Orders by Hour
+
+![Line plot of drink orders by hour](plot3.png)
+
+Most orders occurred around mid-morning (10–11 AM), showing a caffeine rush. The second spike around early afternoon may show lunchtime habits. The hourly patterns can be important for businesses as it can show consumer habits.
+
+
